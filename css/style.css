@@ -546,10 +546,17 @@ footer {
     font-size: 0.9rem;
 }
 
-/* Mobile Responsive */
-@media (max-width: 768px) {
+/* Responsive Design */
+
+/* Tablet & Mobile (max-width: 992px) */
+@media (max-width: 992px) {
     .menu-toggle {
         display: block;
+    }
+
+    .bar {
+        background-color: var(--primary-color);
+        /* Fix invisible menu */
     }
 
     .nav-menu {
@@ -575,18 +582,72 @@ footer {
 
     .hero-content {
         flex-direction: column-reverse;
+        /* Text below image/shape */
         text-align: center;
+        justify-content: center;
     }
 
     .hero-text {
         padding-left: 0;
+        margin-top: 30px;
+    }
+
+    .hero-text h1 {
+        font-size: 2.8rem;
     }
 
     .hero-btns {
         justify-content: center;
     }
 
+    .tech-shape {
+        width: 300px;
+        height: 300px;
+        position: relative;
+        top: auto;
+        left: auto;
+        transform: none;
+        margin: 0 auto;
+    }
+}
+
+/* Mobile (max-width: 576px) */
+@media (max-width: 576px) {
+    .section {
+        padding: 50px 0;
+        /* Reduced padding */
+    }
+
+    .section-header h2 {
+        font-size: 2rem;
+    }
+
+    .hero-text h1 {
+        font-size: 2.2rem;
+    }
+
+    .hero-text p {
+        font-size: 1rem;
+    }
+
+    .btn {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+
     .contact-container {
         flex-direction: column;
+    }
+
+    .clients-wrapper {
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .services-grid,
+    .team-grid {
+        grid-template-columns: 1fr;
+        /* Stack cards on small mobile */
+        padding: 0 10px;
     }
 }
